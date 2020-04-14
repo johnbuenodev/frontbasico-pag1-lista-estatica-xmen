@@ -1,0 +1,49 @@
+#xmen-filter {
+    position: relative;
+    margin-top:10px;
+    margin-left:10px;
+    padding: 10px;
+    border: 0;
+    /*
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    background-color: #666;
+    color: white; }
+
+
+.itemClass {
+    width: 550px;
+    display: flex;
+    /*flex-direction: column; */ 
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border: 1px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    list-style: none;
+    background-color: #333;
+    color: white; }
+  .itemClass:hover {
+    background-color: #555; }
+  .itemClass img{
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .infoXmen{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    padding: 20px;
+   
+  }
+  .ElementosFlexboxdirectionrow{
+    display:flex;
+    flex-direction: row;
+
+  }

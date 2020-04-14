@@ -1,0 +1,74 @@
+<!--
+<span>Testando Componente</span>
+<p>list works!</p>
+<div>
+    <p>{{nome}}</p>
+</div>
+<span>Testando ngIf com boolean</span>
+<div>
+    <div *ngIf="status2"> 
+        <span>false</span>
+    </div>
+    <div *ngIf="status1">
+        <span>Se for true</span>
+    </div>
+    <div *ngIf="!status2">
+        <span>Se for diferente de verdadeiro, no caso falso</span>
+    </div>
+</div>
+<div><span>Testando Switch</span></div>
+<div [ngSwitch]="myValue">
+    <span *ngSwitchCase="">Valor Padrão</span>
+    <span *ngSwitchCase="1">Valor 1</span>
+    <span *ngSwitchCase="2">Valor 2</span>
+    <span *ngSwitchCase="3">Valor 3</span>
+</div>
+
+<span>Testando ngFor items estaticos</span>
+<div>
+  <ul class="itemClass">
+      <li  *ngFor="let cliente of clienteList">
+          nome: {{cliente.nome}}  - idade: {{cliente.idade}}
+      </li>
+  </ul>
+</div>
+
+pipe
+
+   {{xmen.number | number 3.0-0}}
+-->
+
+<div>
+    <input type="text" id="xmen-filter" placeholder="Buscar"  maxlength="20">
+</div>
+
+
+<!--<img  [src]="xmenSpriteimg" *ngIf="selectedXmen !== null">-->
+
+<div>
+    <span>LISTA XMEN</span>
+    <div class="ElementosFlexboxdirectionrow">
+    <div class="infoXmen">
+        <img src="../../assets/xmen.jfif" width="120" height="120">
+        <span  class="selected-xmen" *ngIf="selectedXmen">{{selectedXmen}}</span>
+    </div>
+    <div>
+        <ul >
+            <li class="itemClass" *ngFor="let xmen of xmenList" (mouseenter)="selectXmen(xmen)">
+                <img src="" width="20" />
+                <span>nome: {{xmen.nome}}  - equipe: {{xmen.equipe}} - habilidade: {{xmen.habilidade}}</span>
+            </li>
+        </ul>
+    </div>
+    </div>
+</div>
+
+<div>
+ <input type="text" [(ngModel)] ="nomeXmen">
+ <button (click)="salvar()">SALVAR</button>
+</div>
+
+<div>
+ <span>Escolhido:</span>
+ <span>{{nomeXmen}}</span>
+</div>
